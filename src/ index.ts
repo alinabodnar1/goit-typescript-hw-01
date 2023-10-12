@@ -1,6 +1,7 @@
 import Document from "next/document";
 import { concatenation } from "./concatenation";
 import { reverse } from "./reverse";
+import { getProperty } from "./getProperty";
 
 let numbers = reverse<number>([1, 2, 3, 4, 5]);
 console.log(numbers); // [5,4,3,2,1]
@@ -18,4 +19,11 @@ if (button && input){
 }
 
 
+const student = {
+  name: 'John',
+  age: 25,
+  address: "New York",
+}
 
+let result = getProperty(student, "age");
+console.log('result:', result);
